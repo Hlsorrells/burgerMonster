@@ -4,7 +4,7 @@
 // =================================================================
 
 // Set up MySQL connection.
-var mysql = require("mysql");
+const mysql = require("mysql");
 
 // =================================================================
 // MYSQL CONFIGURATION
@@ -12,7 +12,7 @@ var mysql = require("mysql");
 // =================================================================
 
 // MySQL DB Connection Information
-var connection = mysql.createConnection({
+const connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
@@ -21,7 +21,7 @@ var connection = mysql.createConnection({
 });
 
 // Initiate MySQL Connection.
-connection.connect(function (err) {
+connection.connect((err) => {
     if (err) {
         console.error("error connecting: " + err.stack);
         return;
