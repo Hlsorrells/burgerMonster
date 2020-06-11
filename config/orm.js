@@ -10,7 +10,7 @@ const connection = require("../config/connection.js");
 // ["?", "?", "?"].toString() => "?,?,?";
 printQuestionMarks = (num) => {
   const arr = [];
-  for (const i = 0; i < num; i++) {
+  for (let i = 0; i < num; i++) {
     arr.push("?");
   }
   return arr.toString();
