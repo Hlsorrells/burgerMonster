@@ -1,7 +1,7 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(() => {
     $(".devour-burger").on("click", (event) => {         //.change-sleep
-      const id = $(this).data("id");
+      const id = event.target.getAttribute('data-id');
       const eaten = 1;       //newsleep
   
       const newEatenState = {                       // newSleepState
