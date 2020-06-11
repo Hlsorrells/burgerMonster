@@ -3,6 +3,7 @@
 // Series of npm packages that give our server useful functionality
 // =================================================================
 const express = require("express");
+const exphbs = require("express-handlebars");
 
 // =================================================================
 // EXPRESS CONFIGURATION
