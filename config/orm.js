@@ -70,15 +70,6 @@ const orm = {
       }
       cb(result);
     });
-  },
-  delete: (table, condition, cb) => {
-    var queryString = `DELETE FROM ${table} WHERE ${condition}`;
-    connection.query(queryString, (err, result) => {
-      if (err) {
-        throw err;
-      }
-      cb(result);
-    });
   }
 };
 
