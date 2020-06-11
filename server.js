@@ -2,7 +2,7 @@
 // DEPENDENCIES
 // Series of npm packages that give our server useful functionality
 // =================================================================
-var express = require("express");
+const express = require("express");
 
 // =================================================================
 // EXPRESS CONFIGURATION
@@ -10,10 +10,10 @@ var express = require("express");
 // =================================================================
 
 // Create express app instance
-var app = express();
+const app = express();
 
 // Set the port of application
-var PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // =================================================================
 // MIDDLEWARE CONFIGURATION
@@ -37,7 +37,7 @@ app.set("view engine", "handlebars");
 // ==================================================================
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/controller.js");
+const routes = require("./controllers/controller.js");
 
 app.use(routes);
 
@@ -46,7 +46,7 @@ app.use(routes);
 // ==================================================================
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
+app.listen(PORT, () => {
   // Log (server-side) when our server has started
   console.log("Server listening on: http://localhost:" + PORT);
 });
